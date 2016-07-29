@@ -26,8 +26,10 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
-
-
+m = rows(X);
+mu = mean(X); % 1 x n
+sigma = std(X); % 1 xn
+X_norm = ( X - ones(m, 1) * mu ) ./ sigma;
 
 
 
